@@ -1,7 +1,6 @@
 # Loud_ML
 InfluxDB, Chronograf, &amp; Loud ML container configs and setup to make time series predictions with machine learning. 
 
-
 ````bash
 docker network create --subnet=172.18.0.0/24 loudml2
 ````
