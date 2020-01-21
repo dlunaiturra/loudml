@@ -1,7 +1,7 @@
 datasources:
   - name: telegraf
     type: influxdb
-    addr: 172.18.0.86:8086
+    addr: influxdb2:8086
     database: telegraf
 
 storage:

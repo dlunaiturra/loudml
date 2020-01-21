@@ -1,35 +1,28 @@
 version: "3.2"
 services:
-  influx:
+  influxdb2:
     image: influxdb
+    container_name: influxdb2
     volumes:
       - ./influxdb:/var/lib/influxdb
       - ./LoudML2/influxdb.conf:/etc/influxdb/influxdb.conf:ro
     ports:
       - 8086:8086
-    networks:
-      - loudml2
 
   chrono:
     image: chronograf
+    container_name: chrono
     volumes:
       - ./LoudML2/chronograf:/var/lib/chronograf
     ports:
       - 8888:8888
-    networks:
-      - loudml2
 
   loudml:
     image: loudml/community
+    container_name: loudml
     ports:
       - 8077:8077
     volumes:
       - ./LoudML2:/var/lib/loudml:rw
       - ./LoudML2/config.yml:/etc/loudml/config.yml:ro
       - ./LoudML2/model.json:/etc/loudml/model.json:ro
-    networks:
-      - loudml2
-
-networks:
-  loudml2:
-    driver: bridge
