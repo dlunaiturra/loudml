@@ -1,0 +1,11 @@
+version: "3.2"
+services:
+  influx:
+    image: influxdb
+    volumes:
+      - influxdb:/var/lib/influxdb
+      - LoudML2/influxdb.conf:/etc/influxdb/influxdb.conf:ro
+
+networks:
+  loudml2:
+    driver: bridge
