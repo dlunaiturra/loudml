@@ -22,5 +22,8 @@ docker run -p 8888:8888 --net loudml2 --ip 172.18.0.77 --name chrono2 -v /Users/
 ```
 
 ````bash
-docker run -ti -p 8077:8077 --net loudml2 --ip 172.18.0.88 --name loudml2 -v /Users/super/work/learning/loudml/Loud_ML/LoudML2:/var/lib/loudml:rw -v /Users/super/work/learning/loudml/Loud_ML/LoudML2/config.yml:/etc/loudml/config.yml:ro -v /Users/super/work/learning/loudml/Loud_ML/LoudML2/model.json:/etc/loudml/model.json:ro loudml/community
+docker run -ti -p 8077:8077 --net loudml2 --ip 172.18.0.88 --name loudml2 
+-v /Users/super/work/learning/loudml/Loud_ML/LoudML2:/var/lib/loudml:rw 
+-v /Users/super/work/learning/loudml/Loud_ML/LoudML2/config.yml:/etc/loudml/config.yml:ro 
+-v /Users/super/work/learning/loudml/Loud_ML/LoudML2/model.json:/etc/loudml/model.json:ro loudml/community
 ````
